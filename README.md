@@ -35,6 +35,6 @@ Building this project was a massive level-up for my Vanilla JavaScript and UI de
 
 ## 🔗 Links
 
-- **Live Site URL (Frontend):** [Deploy your frontend and paste link here]
+- **Live Site URL (Frontend):** `https://ibrahimtaha22.github.io/Multi-step-Form-Solution-/`
 - **Live API URL (Backend):** `https://gaming-form-backend.vercel.app`
-- **Solution URL on GitHub:** [Paste your GitHub repository link here]
+- **Solution URL on GitHub:** `https://github.com/ibrahimtaha22/Multi-step-Form-Solution-`
