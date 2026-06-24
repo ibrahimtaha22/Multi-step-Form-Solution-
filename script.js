@@ -145,7 +145,7 @@ nextBtn.addEventListener("click", () => {
       if (input.type === "radio") {
         const parentElement = input.parentElement;
         const mainPlanName = parentElement
-          .querySelector("h3[data-name='plan-name']")
+          .querySelector("span[data-name='plan-name']")
           .textContent.trim();
         document.querySelector("#s4_choosen-plan").textContent = mainPlanName;
 
@@ -158,7 +158,7 @@ nextBtn.addEventListener("click", () => {
       } else if (input.type === "checkbox") {
         const grandParentElement = input.parentElement.parentElement;
         const AddsOnPlanName = grandParentElement
-          .querySelector("h3[data-name='add-ons-plan-name']")
+          .querySelector("span[data-name='add-ons-plan-name']")
           .textContent.trim();
 
         const AddsOnPlanPrice = grandParentElement
