@@ -160,8 +160,11 @@ nextBtn.addEventListener("click", () => {
         const AddsOnPlanName = grandParentElement
           .querySelector("h3[data-name='add-ons-plan-name']")
           .textContent.trim();
+
         const AddsOnPlanPrice = grandParentElement
-          .querySelector("span:not(.hidden)")
+          .querySelector(
+            '[data-name="add-ons-monthly-plan"]:not(.hidden),[data-name="add-ons-year-plan"]:not(.hidden)',
+          )
           .textContent.trim();
 
         totalPrice.push(parseFloat(AddsOnPlanPrice.match(/\d+/)[0]));
