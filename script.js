@@ -295,28 +295,6 @@ const insertAddsOnBlockElement = (Adds_on_plan, Adds_on_price) => {
   number++;
 };
 
-const validateCheckedInputs = (Adds_on_plan, Adds_on_price) => {
-  const nodeElements = document.querySelectorAll(
-    '[data-name="step-4_adds-on-plan"],[data-name="step-4_adds-on-price"]',
-  );
-
-  const booleanArr = [];
-
-  if (nodeElements) {
-    for (let index = 0; index < nodeElements.length; index++) {
-      const elementText = nodeElements.item(index).textContent.trim();
-
-      if (elementText === Adds_on_plan || elementText === Adds_on_price) {
-        booleanArr.push(true);
-      } else {
-        booleanArr.push(false);
-      }
-    }
-  }
-
-  return booleanArr.every((item) => item === true);
-};
-
 function sendDataToBackend() {
   const planName = document
     .querySelector("#s4_choosen-plan")
