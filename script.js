@@ -1,6 +1,6 @@
 let currentStep = 1;
 
-let formData = {
+const formData = {
   name: "",
   email: "",
   phone: "",
@@ -139,28 +139,28 @@ nextBtn.addEventListener("click", () => {
     oldResult.textContent = "";
 
     const checkedInputs = document.querySelectorAll("input:checked");
-    let totalPrice = [];
+    const totalPrice = [];
     let result = 0;
     checkedInputs.forEach((input) => {
       if (input.type === "radio") {
-        let parentElement = input.parentElement;
-        let mainPlanName = parentElement
+        const parentElement = input.parentElement;
+        const mainPlanName = parentElement
           .querySelector("h3[data-name='plan-name']")
           .textContent.trim();
         document.querySelector("#s4_choosen-plan").textContent = mainPlanName;
 
-        let MainPlanPrice = parentElement
+        const MainPlanPrice = parentElement
           .querySelector("p:not(.hidden)[data-name]")
           .childNodes[0].textContent.trim();
         document.querySelector("#s4_choosen-price").textContent = MainPlanPrice;
 
         totalPrice.push(parseFloat(MainPlanPrice.match(/\d+/)[0]));
       } else if (input.type === "checkbox") {
-        let grandParentElement = input.parentElement.parentElement;
-        let AddsOnPlanName = grandParentElement
+        const grandParentElement = input.parentElement.parentElement;
+        const AddsOnPlanName = grandParentElement
           .querySelector("h3[data-name='add-ons-plan-name']")
           .textContent.trim();
-        let AddsOnPlanPrice = grandParentElement
+        const AddsOnPlanPrice = grandParentElement
           .querySelector("span:not(.hidden)")
           .textContent.trim();
 
@@ -217,7 +217,7 @@ const HighlightClickedPlan = () => {
 const monthlyLabel = document.querySelector("#monthly-label");
 const yearlyLabel = document.querySelector("#yearly-label");
 const toggleButton = document.querySelector('[data-name="toggle-button"]');
-let changePer = document.querySelector("#Total-subscription");
+const changePer = document.querySelector("#Total-subscription");
 const yearPlanNodeElements = document.querySelectorAll(
   '[data-name="yearly-plan"],[data-name="add-ons-year-plan"],[id="s4-total-per-year"]',
 );
@@ -297,7 +297,7 @@ const validateCheckedInputs = (Adds_on_plan, Adds_on_price) => {
     '[data-name="step-4_adds-on-plan"],[data-name="step-4_adds-on-price"]',
   );
 
-  let booleanArr = [];
+  const booleanArr = [];
 
   if (nodeElements) {
     for (let index = 0; index < nodeElements.length; index++) {
