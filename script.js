@@ -209,7 +209,7 @@ const ClickOnPlan = () => {
 ClickOnPlan();
 
 const HighlightClickedPlan = () => {
-  clickedPlan = document.querySelector(`[name="plan"][checked]`);
+  const clickedPlan = document.querySelector(`[name="plan"][checked]`);
   clickedPlan.parentElement.classList.add("bg-blue-50", "border-blue-900");
   clickedPlan.parentElement.classList.remove("border-gray-300");
 };
