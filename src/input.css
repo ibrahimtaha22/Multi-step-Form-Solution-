@@ -1,5 +1,5 @@
 @import "tailwindcss";
-/* بنعمل أنيميشن بسيط بيغير الشفافية وبيحرك العنصر من تحت لفوق حاجة بسيطة */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -11,13 +11,19 @@
   }
 }
 
-/* بنربط الأنيميشن ده بالكلاس اللي بيظهر الصفحة */
 .step-active {
-  display: block; /* عشان نتأكد إنه ظاهر */
+  display: block;
   animation: fadeIn 0.4s ease-out forwards;
 }
-
-/* في ملف الـ CSS */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
 .sidebar-bg {
   background-image: url("../assets/images/bg-sidebar-mobile.svg");
   background-repeat: no-repeat;
@@ -28,7 +34,7 @@
 @media (min-width: 48rem) {
   .sidebar-bg {
     background-image: url("../assets/images/bg-sidebar-desktop.svg");
-    background-size: cover; /* غيرناها من contain إلى cover لتناسب تصميمك */
+    background-size: cover;
     background-position: center;
   }
 }
