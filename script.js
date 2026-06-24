@@ -129,7 +129,7 @@ nextBtn.addEventListener("click", () => {
       return;
     }
     navigateToStep(currentStep + 1);
-  } else if (currentStep == 3) {
+  } else if (currentStep === 3) {
     const oldAddons = document.querySelectorAll(
       '[data-name="step-4_adds-on-plan"]',
     );
@@ -172,9 +172,9 @@ nextBtn.addEventListener("click", () => {
     totalPrice.forEach((num) => (result += num));
     document.querySelector("#Total-price").textContent = result;
     navigateToStep(currentStep + 1);
-  } else if (currentStep == 2) {
+  } else if (currentStep === 2) {
     navigateToStep(currentStep + 1);
-  } else if (currentStep == 4) {
+  } else if (currentStep === 4) {
     UpdateFormData();
     sendDataToBackend();
   }
